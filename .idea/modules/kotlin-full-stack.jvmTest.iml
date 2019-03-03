@@ -5,8 +5,8 @@
       <configuration version="3" platform="JVM 1.6" useProjectSettings="false" isTestModule="true" externalProjectId="kotlin-full-stack">
         <sourceSets>
           <sourceSet>kotlin-full-stack.jvmMain</sourceSet>
-          <sourceSet>kotlin-full-stack.commonMain</sourceSet>
           <sourceSet>kotlin-full-stack.commonTest</sourceSet>
+          <sourceSet>kotlin-full-stack.commonMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <compilerSettings />
