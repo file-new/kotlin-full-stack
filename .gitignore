@@ -129,4 +129,4 @@ gradle-app.setting
 # End of https://www.gitignore.io/api/kotlin,gradle,intellij
 
 ### Intellij ###
-#.idea/modules/
+.idea/modules/
