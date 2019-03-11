@@ -43,7 +43,7 @@ kotlin {
             }
         }
         // JVM-specific tests and their dependencies:
-        jvm().compilations["test"].defaultSourceSet {
+        js().compilations["test"].defaultSourceSet {
             dependencies {
                 implementation(kotlin("test-js"))
             }
