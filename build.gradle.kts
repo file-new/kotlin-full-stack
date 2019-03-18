@@ -1,6 +1,3 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinJvmTargetPreset
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTargetPreset
-
 plugins {
     kotlin("multiplatform") version "1.3.21"
 }
@@ -13,11 +10,14 @@ kotlin {
     jvm()
     js()
     sourceSets {
+        @Suppress("UNUSED_VARIABLE") // The name of the property is used to look up the source set.
         val commonMain by getting {
             dependencies {
                 implementation(kotlin("stdlib-common"))
             }
         }
+
+        @Suppress("UNUSED_VARIABLE") // The name of the property is used to look up the source set.
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
