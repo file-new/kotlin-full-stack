@@ -1,4 +1,4 @@
-package sample
+package fnew
 
 import kotlin.test.Test
 import kotlin.test.assertTrue

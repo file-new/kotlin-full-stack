@@ -1,4 +1,4 @@
-package sample
+package fnew
 
 expect class Sample() {
     fun checkMe(): Int
