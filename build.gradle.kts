@@ -59,6 +59,7 @@ kotlin {
     }
 }
 
+// Workaround for multi-platform run task bug. See https://youtrack.jetbrains.com/issue/KT-26885
 fun getJvmClasses() : ConfigurableFileCollection {
     val target = kotlin.targets.getByName("jvm")
     val compilation = target.compilations.getByName("main") as KotlinCompilationToRunnableFiles<KotlinCommonOptions>
