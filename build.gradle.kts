@@ -1,5 +1,5 @@
 plugins {
-    kotlin("multiplatform") version "1.3.21"
+    kotlin("multiplatform") version Versions.kotlin
 }
 
 repositories {
@@ -28,6 +28,7 @@ kotlin {
         jvm().compilations["main"].defaultSourceSet {
             dependencies {
                 implementation(kotlin("stdlib-jdk8"))
+                implementation(Deps.ktorServer)
             }
         }
         // JVM-specific tests and their dependencies:
