@@ -9,7 +9,3 @@ expect object Platform {
 }
 
 fun hello(): String = "Hello from ${Platform.name}"
-
-fun main(args: Array<String>) {
-    println(hello())
-}

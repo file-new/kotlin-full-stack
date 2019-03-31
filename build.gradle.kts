@@ -1,4 +1,8 @@
+import org.jetbrains.kotlin.gradle.dsl.KotlinCommonOptions
+import org.jetbrains.kotlin.gradle.plugin.KotlinCompilationToRunnableFiles
+
 plugins {
+    application
     kotlin("multiplatform") version Versions.kotlin
 }
 
@@ -26,6 +30,9 @@ kotlin {
         }
         // Default source set for JVM-specific sources and dependencies:
         jvm().compilations["main"].defaultSourceSet {
+            application {
+                mainClassName = "fnew.MainKt"
+            }
             dependencies {
                 implementation(kotlin("stdlib-jdk8"))
                 implementation(Deps.ktorServer)
@@ -50,4 +57,19 @@ kotlin {
             }
         }
     }
+}
+
+fun getJvmClasses() : ConfigurableFileCollection {
+    val target = kotlin.targets.getByName("jvm")
+    val compilation = target.compilations.getByName("main") as KotlinCompilationToRunnableFiles<KotlinCommonOptions>
+    return files(
+        compilation.runtimeDependencyFiles,
+        compilation.output.allOutputs
+    )
+}
+
+
+tasks.named<JavaExec>("run") {
+    main = "fnew.MainKt"
+    classpath = getJvmClasses()
 }
