@@ -1,8 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="kotlin-full-stack-js">
     <output-path>$PROJECT_DIR$/build/libs</output-path>
-    <root id="archive" name="kotlin-full-stack-js.jar">
-      <element id="module-output" name="kotlin-full-stack.jsMain" />
-    </root>
+    <root id="archive" name="kotlin-full-stack-js.jar" />
   </artifact>
 </component>
