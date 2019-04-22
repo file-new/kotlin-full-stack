@@ -7,4 +7,7 @@ pluginManagement {
         }
     }
 }
+
 rootProject.name = "kotlin-full-stack"
+
+include(":shared",":web")
