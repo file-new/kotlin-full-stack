@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.KotlinCompilationToRunnableFiles
 
 plugins {
     application
-    kotlin("multiplatform") version Versions.kotlin
+    kotlin("multiplatform")
 }
 
 repositories {
@@ -18,6 +18,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(kotlin("stdlib-common"))
+                project(":shared")
             }
         }
 
@@ -26,6 +27,7 @@ kotlin {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
+                implementation(project(":shared"))
             }
         }
         // Default source set for JVM-specific sources and dependencies:
@@ -36,6 +38,7 @@ kotlin {
             dependencies {
                 implementation(kotlin("stdlib-jdk8"))
                 implementation(Deps.ktorServer)
+                implementation(project(":shared"))
             }
         }
         // JVM-specific tests and their dependencies:

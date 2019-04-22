@@ -3,9 +3,9 @@ package fnew
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
-class SampleTests {
+class SampleTestsJVM {
     @Test
-    fun testMe() {
-        assertTrue(Sample().checkMe() > 0)
+    fun testHello() {
+        assertTrue("JVM" in hello())
     }
 }

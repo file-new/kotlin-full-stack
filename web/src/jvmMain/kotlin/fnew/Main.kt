@@ -8,15 +8,8 @@ import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
-actual class Sample {
-    actual fun checkMe() = 42
-}
-
-actual object Platform {
-    actual val name: String = "JVM"
-}
-
 fun main(args: Array<String>) {
+    hello()
     embeddedServer(Netty, 8080) {
         routing {
             get("/") {
