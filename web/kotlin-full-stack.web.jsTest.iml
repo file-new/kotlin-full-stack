@@ -5,8 +5,8 @@
       <configuration version="3" platform="JavaScript " useProjectSettings="false" isTestModule="true" externalProjectId=":web">
         <sourceSets>
           <sourceSet>kotlin-full-stack.web.jsMain</sourceSet>
-          <sourceSet>kotlin-full-stack.web.commonMain</sourceSet>
           <sourceSet>kotlin-full-stack.web.commonTest</sourceSet>
+          <sourceSet>kotlin-full-stack.web.commonMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <compilerSettings />
