@@ -38,12 +38,14 @@ android {
 dependencies {
     implementation(project(":shared"))
 
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}")
-    implementation("androidx.appcompat:appcompat:${Versions.androidx}")
-    implementation("androidx.constraintlayout:constraintlayout:1.1.3")
-    implementation("com.google.android.material:material:${Versions.androidx}")
+    implementation(Deps.kotlinJvm)
+    implementation(Deps.Android.appCompat)
+    implementation(Deps.Android.contraintLayout)
+    implementation(Deps.Android.lifecyleExtensions)
+    implementation(Deps.Android.lifecyleRuntime)
+    implementation(Deps.Android.material)
 
-    testImplementation("junit:junit:4.12")
+    testImplementation(Deps.junit)
 
-    androidTestImplementation("androidx.test:runner:1.1.1")
+    androidTestImplementation(Deps.Android.testRunner)
 }

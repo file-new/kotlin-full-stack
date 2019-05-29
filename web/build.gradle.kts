@@ -25,8 +25,8 @@ kotlin {
         @Suppress("UNUSED_VARIABLE") // The name of the property is used to look up the source set.
         val commonTest by getting {
             dependencies {
-                implementation(kotlin("test-common"))
-                implementation(kotlin("test-annotations-common"))
+                implementation(kotlin(Deps.Kotlin.Common.test))
+                implementation(kotlin(Deps.Kotlin.Common.testAnnotations))
                 implementation(project(":shared"))
             }
         }
@@ -36,27 +36,27 @@ kotlin {
                 mainClassName = "fnew.MainKt"
             }
             dependencies {
-                implementation(kotlin("stdlib-jdk8"))
-                implementation(Deps.ktorServer)
+                implementation(kotlin(Deps.Kotlin.Jvm.stdLib))
+                implementation(Deps.Jvm.ktorServer)
                 implementation(project(":shared"))
             }
         }
         // JVM-specific tests and their dependencies:
         jvm().compilations["test"].defaultSourceSet {
             dependencies {
-                implementation(kotlin("test-junit"))
+                implementation(kotlin(Deps.Kotlin.Jvm.junit))
             }
         }
         // JS-specific tests and their dependencies:
         js().compilations["main"].defaultSourceSet {
             dependencies {
-                implementation(kotlin("stdlib-js"))
+                implementation(kotlin(Deps.Kotlin.Js.stdLib))
             }
         }
         // JVM-specific tests and their dependencies:
         js().compilations["test"].defaultSourceSet {
             dependencies {
-                implementation(kotlin("test-js"))
+                implementation(kotlin(Deps.Kotlin.Js.junit))
             }
         }
     }

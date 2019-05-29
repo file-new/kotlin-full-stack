@@ -8,28 +8,28 @@ kotlin {
         @Suppress("UNUSED_VARIABLE") // The name of the property is used to look up the source set.
         val commonMain by getting {
             dependencies {
-                implementation(kotlin("stdlib-common"))
+                implementation(kotlin(Deps.Kotlin.Common.stdLib))
             }
         }
 
         @Suppress("UNUSED_VARIABLE") // The name of the property is used to look up the source set.
         val commonTest by getting {
             dependencies {
-                implementation(kotlin("test-common"))
-                implementation(kotlin("test-annotations-common"))
+                implementation(kotlin(Deps.Kotlin.Common.test))
+                implementation(kotlin(Deps.Kotlin.Common.testAnnotations))
             }
         }
 
         // Default source set for JVM-specific sources and dependencies:
         jvm().compilations["main"].defaultSourceSet {
             dependencies {
-                implementation(kotlin("stdlib-jdk8"))
+                implementation(kotlin(Deps.Kotlin.Jvm.stdLib))
             }
         }
         // JVM-specific tests and their dependencies:
         jvm().compilations["test"].defaultSourceSet {
             dependencies {
-                implementation(kotlin("test-junit"))
+                implementation(kotlin(Deps.Kotlin.Jvm.junit))
             }
         }
     }
