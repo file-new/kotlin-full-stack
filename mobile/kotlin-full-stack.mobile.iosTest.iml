@@ -4,9 +4,9 @@
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="3" platform="Native " useProjectSettings="false" isTestModule="true" externalProjectId=":mobile">
         <sourceSets>
+          <sourceSet>kotlin-full-stack.mobile.commonMain</sourceSet>
           <sourceSet>kotlin-full-stack.mobile.iosMain</sourceSet>
           <sourceSet>kotlin-full-stack.mobile.commonTest</sourceSet>
-          <sourceSet>kotlin-full-stack.mobile.commonMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <compilerSettings />

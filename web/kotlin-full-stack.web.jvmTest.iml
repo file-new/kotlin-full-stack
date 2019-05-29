@@ -4,9 +4,9 @@
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="3" platform="JVM 1.6" useProjectSettings="false" isTestModule="true" externalProjectId=":web">
         <sourceSets>
-          <sourceSet>kotlin-full-stack.web.jvmMain</sourceSet>
           <sourceSet>kotlin-full-stack.web.commonTest</sourceSet>
           <sourceSet>kotlin-full-stack.web.commonMain</sourceSet>
+          <sourceSet>kotlin-full-stack.web.jvmMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <compilerSettings />
