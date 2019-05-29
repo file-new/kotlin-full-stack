@@ -3,6 +3,10 @@ plugins {
     id("kotlin-android")
 }
 
+repositories {
+    google()
+    mavenCentral()
+}
 
 android {
     compileSdkVersion(28)
@@ -41,5 +45,5 @@ dependencies {
 
     testImplementation("junit:junit:4.12")
 
-    androidTestImplementation("androidx.test:runner:${Versions.androidx}")
+    androidTestImplementation("androidx.test:runner:1.1.1")
 }

@@ -1,10 +1,12 @@
 package sample
 
 import fnew.hello
+import org.junit.Assert
+import org.junit.Test
 
 class SampleTestsAndroid {
     @Test
     fun testHello() {
-        assertTrue("Android" in hello())
+        Assert.assertTrue("Android" in hello())
     }
 }

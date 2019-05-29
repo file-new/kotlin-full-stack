@@ -4,9 +4,9 @@
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="3" platform="JVM 1.6" useProjectSettings="false" isTestModule="true" externalProjectId=":shared">
         <sourceSets>
-          <sourceSet>kotlin-full-stack.shared.commonMain</sourceSet>
           <sourceSet>kotlin-full-stack.shared.jvmMain</sourceSet>
           <sourceSet>kotlin-full-stack.shared.commonTest</sourceSet>
+          <sourceSet>kotlin-full-stack.shared.commonMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <compilerSettings />
