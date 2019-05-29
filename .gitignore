@@ -4,8 +4,8 @@
 
 ### Intellij ###
 out/
-.idea/
-*.iml
+# .idea/
+# *.iml
 modules.xml
 *.ipr
 
