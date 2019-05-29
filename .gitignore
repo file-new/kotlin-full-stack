@@ -4,8 +4,8 @@
 
 ### Intellij ###
 out/
-# .idea/
-# *.iml
+.idea/
+*.iml
 modules.xml
 *.ipr
 
@@ -23,9 +23,6 @@ cmake-build-*/
 
 # JIRA plugin
 atlassian-ide-plugin.xml
-
-# Cursive Clojure plugin
-.idea/replstate.xml
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
@@ -82,6 +79,3 @@ gradle-app.setting
 **/build/
 
 # End of https://www.gitignore.io/api/kotlin,gradle,intellij
-
-### Intellij ###
-.idea/modules/
