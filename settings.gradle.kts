@@ -10,4 +10,4 @@ pluginManagement {
 
 rootProject.name = "kotlin-full-stack"
 
-include(":mobile",":shared",":web")
+include(":android",":shared",":web")
