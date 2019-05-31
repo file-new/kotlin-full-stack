@@ -1,18 +1,43 @@
 plugins {
+    id("com.android.library")
     kotlin("multiplatform")
 }
 
-kotlin {
-    jvm()
+android {
+    compileSdkVersion(28)
+
+    defaultConfig {
+        minSdkVersion(15)
+        targetSdkVersion(28)
+    }
+    compileOptions {
+        setSourceCompatibility(JavaVersion.VERSION_1_8)
+        setTargetCompatibility(JavaVersion.VERSION_1_8)
+    }
+
     sourceSets {
-        @Suppress("UNUSED_VARIABLE") // The name of the property is used to look up the source set.
+        getByName("main") {
+            java.srcDirs("src/androidMain/kotlin")
+            manifest.srcFile("src/androidMain/AndroidManifest.xml")
+        }
+    }
+}
+
+kotlin {
+    android {
+        publishLibraryVariants("release", "debug")
+    }
+    jvm()
+    js()
+    @Suppress("UNUSED_VARIABLE") // The name of the some properties are used to look up the source set.
+    sourceSets {
+
         val commonMain by getting {
             dependencies {
                 implementation(kotlin(Deps.Kotlin.Common.stdLib))
             }
         }
 
-        @Suppress("UNUSED_VARIABLE") // The name of the property is used to look up the source set.
         val commonTest by getting {
             dependencies {
                 implementation(kotlin(Deps.Kotlin.Common.test))
@@ -20,17 +45,36 @@ kotlin {
             }
         }
 
-        // Default source set for JVM-specific sources and dependencies:
+        val androidMain by getting {
+            dependencies {
+                implementation(kotlin(Deps.Kotlin.Android.stdLib))
+            }
+        }
+
         jvm().compilations["main"].defaultSourceSet {
             dependencies {
                 implementation(kotlin(Deps.Kotlin.Jvm.stdLib))
             }
         }
-        // JVM-specific tests and their dependencies:
+
         jvm().compilations["test"].defaultSourceSet {
             dependencies {
                 implementation(kotlin(Deps.Kotlin.Jvm.junit))
             }
         }
-    }
+
+
+        js().compilations["main"].defaultSourceSet {
+            dependencies {
+                implementation(kotlin(Deps.Kotlin.Js.stdLib))
+            }
+        }
+
+        js().compilations["test"].defaultSourceSet {
+            dependencies {
+                implementation(kotlin(Deps.Kotlin.Js.test))
+            }
+        }
+    } 
 }
+configurations.create("compileClasspath")

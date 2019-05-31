@@ -1,7 +1,7 @@
 pluginManagement {
     resolutionStrategy {
         eachPlugin {
-            if (requested.id.id == "kotlin-multiplatform") {
+            if (requested.id.id == "kotlin-multiplatform" || requested.id.id == "kotlin2js") {
                 useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
             }
         }
@@ -10,4 +10,4 @@ pluginManagement {
 
 rootProject.name = "kotlin-full-stack"
 
-include(":android",":shared",":web")
+include(":android", "backend", ":shared", ":web")

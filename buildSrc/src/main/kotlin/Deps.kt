@@ -24,6 +24,10 @@ object Deps {
     }
 
     object Kotlin {
+        object Android {
+            const val stdLib = "stdlib"
+        }
+
         object Common {
             const val stdLib = "stdlib-common"
             const val test = "test-common"
@@ -37,7 +41,7 @@ object Deps {
 
         object Js {
             const val stdLib = "stdlib-js"
-            const val junit = "test-js"
+            const val test = "test-js"
         }
     }
 }

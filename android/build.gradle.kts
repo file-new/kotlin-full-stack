@@ -1,6 +1,6 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
+    kotlin("android")
 }
 
 repositories {
@@ -33,6 +33,17 @@ android {
         setSourceCompatibility(JavaVersion.VERSION_1_8)
         setTargetCompatibility(JavaVersion.VERSION_1_8)
     }
+    sourceSets {
+        getByName("androidTest") {
+            java.srcDirs("src/androidTest/kotlin")
+        }
+        getByName("main") {
+            java.srcDirs("src/main/kotlin")
+        }
+        getByName("test") {
+            java.srcDirs("src/test/kotlin")
+        }
+    }
 }
 
 dependencies {
@@ -45,7 +56,7 @@ dependencies {
     implementation(Deps.Android.lifecyleRuntime)
     implementation(Deps.Android.material)
 
-    testImplementation(Deps.junit)
+    testImplementation(kotlin(Deps.Kotlin.Jvm.junit, Versions.kotlin))
 
     androidTestImplementation(Deps.Android.testRunner)
 }

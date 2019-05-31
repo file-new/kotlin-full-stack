@@ -1,0 +1,4 @@
+package fnew
+
+class MainActivityTest {
+}
