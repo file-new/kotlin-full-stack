@@ -3,6 +3,7 @@ package fnew
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import fnew.shared.hello
 
 
 class MainActivity : AppCompatActivity() {

@@ -79,3 +79,16 @@ gradle-app.setting
 **/build/
 
 # End of https://www.gitignore.io/api/kotlin,gradle,intellij
+
+
+### Xcode ###
+## User settings
+xcuserdata/
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings

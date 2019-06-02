@@ -3,6 +3,12 @@ plugins {
     kotlin("multiplatform")
 }
 
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+}
+
 android {
     compileSdkVersion(28)
 
@@ -27,8 +33,14 @@ kotlin {
     android {
         publishLibraryVariants("release", "debug")
     }
+    iosX64("ios") {
+        binaries {
+            framework("shared")
+        }
+    }
     jvm()
     js()
+
     @Suppress("UNUSED_VARIABLE") // The name of the some properties are used to look up the source set.
     sourceSets {
 
@@ -48,6 +60,23 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(kotlin(Deps.Kotlin.Android.stdLib))
+            }
+        }
+
+        val androidTest by getting {
+            dependencies {
+                implementation(kotlin(Deps.Kotlin.Android.junit))
+            }
+        }
+
+        val iosMain by getting {
+            dependencies {}
+        }
+
+        val iosTest by getting {
+            dependencies {
+                implementation(kotlin(Deps.Kotlin.Common.test))
+                implementation(kotlin(Deps.Kotlin.Common.testAnnotations))
             }
         }
 
@@ -75,6 +104,10 @@ kotlin {
                 implementation(kotlin(Deps.Kotlin.Js.test))
             }
         }
-    } 
+    }
 }
+
 configurations.create("compileClasspath")
+
+// Pull in iOS specific tasks
+apply(from = "iosTasks.gradle")

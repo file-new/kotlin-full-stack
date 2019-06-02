@@ -26,6 +26,7 @@ object Deps {
     object Kotlin {
         object Android {
             const val stdLib = "stdlib"
+            const val junit = "test-junit"
         }
 
         object Common {

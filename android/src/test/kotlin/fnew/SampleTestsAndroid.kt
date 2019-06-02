@@ -1,5 +1,6 @@
 package fnew
 
+import fnew.shared.hello
 import org.junit.Test
 import kotlin.test.assertTrue
 

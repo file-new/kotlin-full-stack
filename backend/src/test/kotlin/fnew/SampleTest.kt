@@ -1,5 +1,6 @@
 package fnew
 
+import fnew.shared.Platform
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 import kotlin.test.Test

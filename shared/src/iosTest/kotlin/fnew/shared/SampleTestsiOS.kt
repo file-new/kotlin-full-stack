@@ -1,11 +1,11 @@
-package fnew
+package fnew.shared
 
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
-class SampleTestsJS {
+class SampleTestsiOS {
     @Test
     fun testHello() {
-        assertTrue("JS" in hello())
+        assertTrue("iOS" in hello())
     }
 }

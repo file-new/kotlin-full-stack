@@ -1,5 +1,6 @@
 package fnew
 
+import fnew.shared.hello
 import io.ktor.application.call
 import io.ktor.http.ContentType
 import io.ktor.response.respondText
