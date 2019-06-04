@@ -7,12 +7,13 @@ object Versions {
 }
 
 object Deps {
-    const val junit = "junit:junit:${Versions.junit}"
     const val kotlinJvm = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
 
     object Android {
         const val appCompat = "androidx.appcompat:appcompat:1.0.2"
         const val contraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
+        const val espresso = "androidx.test.espresso:espresso-core:3.1.0"
+        const val junit = "androidx.test.ext:junit:1.1.0"
         const val lifecyleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.androidLifecycle}"
         const val lifecyleRuntime = "androidx.lifecycle:lifecycle-runtime:${Versions.androidLifecycle}"
         const val material = "com.google.android.material:material:1.0.0"

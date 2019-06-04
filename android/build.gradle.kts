@@ -61,5 +61,7 @@ dependencies {
 
     testImplementation(kotlin(Deps.Kotlin.Jvm.junit, Versions.kotlin))
 
+    androidTestImplementation(Deps.Android.espresso)
+    androidTestImplementation(Deps.Android.junit)
     androidTestImplementation(Deps.Android.testRunner)
 }
