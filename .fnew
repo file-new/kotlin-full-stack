@@ -1,0 +1,39 @@
+{
+  "transforms": [
+    {
+      "output_variable": "app_name",
+      "type": "input"
+    },
+    {
+      "output_variable": "package_name",
+      "type": "input"
+    },
+    {
+      "output_variable": "application_id_suffix",
+      "type": "input"
+    },
+    {
+      "input_path": "*/src/*/kotlin/fnew/*.kt",
+      "string_replace": {
+        "old": "fnew",
+        "new": "$package_name"
+      },
+      "type": "file_string_replace"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "package_path",
+      "string_prefix": "app/src/main/java/",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "app/src/main/java/fnew/fnew",
+      "output_path": "$package_path",
+      "type": "file_move"
+    }
+  ]
+}
