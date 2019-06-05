@@ -29,11 +29,6 @@
         "new": "/"
       },
       "type": "variable_string_replace"
-    },
-    {
-      "input_path": "app/src/main/java/fnew/fnew",
-      "output_path": "$package_path",
-      "type": "file_move"
     }
   ]
 }
