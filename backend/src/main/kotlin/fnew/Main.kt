@@ -9,12 +9,12 @@ import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
-fun main(args: Array<String>) {
+fun main() {
     hello()
     embeddedServer(Netty, 8080) {
         routing {
             get("/") {
-                call.respondText("File-->New Server", ContentType.Text.Html)
+                call.respondText(hello(), ContentType.Text.Html)
             }
         }
     }.start(wait = true)
