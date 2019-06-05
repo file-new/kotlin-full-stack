@@ -21,6 +21,14 @@
       "type": "file_string_replace"
     },
     {
+      "input_path": "*/src/*/kotlin/fnew/shared/*.kt",
+      "string_replace": {
+        "old": "fnew",
+        "new": "$package_name"
+      },
+      "type": "file_string_replace"
+    },
+    {
       "input_variable": "package_name",
       "output_variable": "package_path",
       "string_prefix": "app/src/main/java/",
