@@ -82,7 +82,7 @@
       "input_path": "ios/iosApp/iosApp.xcodeproj/project.pbxproj",
       "string_replace": {
         "old": "fnew_app_name",
-        "new": "$app_name"
+        "new": "$application_id"
       },
       "type": "file_string_replace"
     },
