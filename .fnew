@@ -214,6 +214,150 @@
       "input_path": "shared/src/androidMain/kotlin/fnew/shared",
       "output_path": "$shared_android_main_package_path",
       "type": "file_move"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "shared_android_test_package_path",
+      "string_prefix": "shared/src/androidTest/kotlin/",
+      "string_suffix": "/shared",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "shared/src/androidTest/kotlin/fnew/shared",
+      "output_path": "$shared_android_test_package_path",
+      "type": "file_move"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "shared_common_main_package_path",
+      "string_prefix": "shared/src/commonMain/kotlin/",
+      "string_suffix": "/shared",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "shared/src/commonMain/kotlin/fnew/shared",
+      "output_path": "$shared_common_main_package_path",
+      "type": "file_move"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "shared_common_test_package_path",
+      "string_prefix": "shared/src/commonTest/kotlin/",
+      "string_suffix": "/shared",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "shared/src/commonTest/kotlin/fnew/shared",
+      "output_path": "$shared_common_test_package_path",
+      "type": "file_move"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "shared_ios_main_package_path",
+      "string_prefix": "shared/src/iosMain/kotlin/",
+      "string_suffix": "/shared",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "shared/src/iosMain/kotlin/fnew/shared",
+      "output_path": "$shared_ios_main_package_path",
+      "type": "file_move"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "shared_ios_test_package_path",
+      "string_prefix": "shared/src/iosTest/kotlin/",
+      "string_suffix": "/shared",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "shared/src/iosTest/kotlin/fnew/shared",
+      "output_path": "$shared_ios_test_package_path",
+      "type": "file_move"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "shared_js_main_package_path",
+      "string_prefix": "shared/src/jsMain/kotlin/",
+      "string_suffix": "/shared",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "shared/src/jsMain/kotlin/fnew/shared",
+      "output_path": "$shared_js_main_package_path",
+      "type": "file_move"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "shared_js_test_package_path",
+      "string_prefix": "shared/src/jsTest/kotlin/",
+      "string_suffix": "/shared",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "shared/src/jsTest/kotlin/fnew/shared",
+      "output_path": "$shared_js_test_package_path",
+      "type": "file_move"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "shared_jvm_main_package_path",
+      "string_prefix": "shared/src/jvmMain/kotlin/",
+      "string_suffix": "/shared",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "shared/src/jvmMain/kotlin/fnew/shared",
+      "output_path": "$shared_jvm_main_package_path",
+      "type": "file_move"
+    }
+    {
+      "input_variable": "package_name",
+      "output_variable": "shared_jvm_test_package_path",
+      "string_prefix": "shared/src/jvmTest/kotlin/",
+      "string_suffix": "/shared",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "shared/src/jvmTest/kotlin/fnew/shared",
+      "output_path": "$shared_jvm_test_package_path",
+      "type": "file_move"
     }
   ]
 }
