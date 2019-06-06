@@ -69,6 +69,30 @@
         "new": "$app_name"
       },
       "type": "file_string_replace"
+    },
+    {
+      "input_path": "ios/iosApp/iosApp.xcodeproj/project.pbxproj",
+      "string_replace": {
+        "old": "fnew_package_name",
+        "new": "$package_name"
+      },
+      "type": "file_string_replace"
+    },
+    {
+      "input_path": "ios/iosApp/iosApp.xcodeproj/project.pbxproj",
+      "string_replace": {
+        "old": "fnew_app_name",
+        "new": "$app_name"
+      },
+      "type": "file_string_replace"
+    },
+    {
+      "input_path": "ios/iosApp/iosApp/Info.plist",
+      "string_replace": {
+        "old": "fnew_app_name",
+        "new": "$app_name"
+      },
+      "type": "file_string_replace"
     }
   ]
 }
