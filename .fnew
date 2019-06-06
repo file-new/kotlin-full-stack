@@ -106,7 +106,7 @@
     },
     {
       "input_path": "android/src/androidTest/kotlin/fnew",
-      "output_path": "android_test_package_path",
+      "output_path": "$android_test_package_path",
       "type": "file_move"
     }
   ]
