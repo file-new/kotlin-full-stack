@@ -168,6 +168,36 @@
       "input_path": "backend/src/test/kotlin/fnew",
       "output_path": "$backend_test_package_path",
       "type": "file_move"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "web_main_package_path",
+      "string_prefix": "web/src/main/kotlin/",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "backend/src/main/kotlin/fnew",
+      "output_path": "$web_main_package_path",
+      "type": "file_move"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "web_test_package_path",
+      "string_prefix": "web/src/test/kotlin/",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "web/src/test/kotlin/fnew",
+      "output_path": "$web_test_package_path",
+      "type": "file_move"
     }
   ]
 }
