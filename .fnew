@@ -61,6 +61,14 @@
         "new": "/"
       },
       "type": "variable_string_replace"
-    }
+    },
+    {
+      "input_path": "android/src/main/res/values/*.xml",
+      "string_replace": {
+        "old": "fnew_app_name",
+        "new": "$app_name"
+      },
+      "type": "file_string_replace"
+    },
   ]
 }
