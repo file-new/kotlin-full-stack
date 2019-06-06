@@ -180,7 +180,7 @@
       "type": "variable_string_replace"
     },
     {
-      "input_path": "backend/src/main/kotlin/fnew",
+      "input_path": "web/src/main/kotlin/fnew",
       "output_path": "$web_main_package_path",
       "type": "file_move"
     },
