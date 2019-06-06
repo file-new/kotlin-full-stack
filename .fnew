@@ -9,7 +9,7 @@
       "type": "input"
     },
     {
-      "output_variable": "application_id_suffix",
+      "output_variable": "application_id",
       "type": "input"
     },
     {
@@ -33,6 +33,22 @@
       "string_replace": {
         "old": "fnew",
         "new": "$package_name"
+      },
+      "type": "file_string_replace"
+    },
+    {
+      "input_path": "backend/build.gradle.kts",
+      "string_replace": {
+        "old": "fnew",
+        "new": "$package_name"
+      },
+      "type": "file_string_replace"
+    },
+    {
+      "input_path": "android/build.gradle.kts",
+      "string_replace": {
+        "old": "fnew.fnew",
+        "new": "$application_id"
       },
       "type": "file_string_replace"
     },
