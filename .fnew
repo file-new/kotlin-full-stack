@@ -200,11 +200,6 @@
       "type": "file_move"
     },
     {
-      "input_path": "web/src/main/kotlin/fnew",
-      "output_path": "$web_main_package_path",
-      "type": "file_move"
-    },
-    {
       "input_variable": "package_name",
       "output_variable": "shared_android_main_package_path",
       "string_prefix": "shared/src/androidMain/kotlin/",
