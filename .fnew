@@ -198,6 +198,27 @@
       "input_path": "web/src/test/kotlin/fnew",
       "output_path": "$web_test_package_path",
       "type": "file_move"
+    },
+    {
+      "input_path": "web/src/main/kotlin/fnew",
+      "output_path": "$web_main_package_path",
+      "type": "file_move"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "shared_android_main_package_path",
+      "string_prefix": "shared/src/androidMain/kotlin/",
+      "string_suffix": "/shared",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "shared/src/androidMain/kotlin/fnew/fnew",
+      "output_path": "$shared_android_main_package_path",
+      "type": "file_move"
     }
   ]
 }
