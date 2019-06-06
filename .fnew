@@ -48,6 +48,14 @@
       "input_path": "android/build.gradle.kts",
       "string_replace": {
         "old": "fnew.fnew",
+        "new": "$package_name"
+      },
+      "type": "file_string_replace"
+    },
+    {
+      "input_path": "android/build.gradle.kts",
+      "string_replace": {
+        "old": "fnewappname",
         "new": "$application_id"
       },
       "type": "file_string_replace"

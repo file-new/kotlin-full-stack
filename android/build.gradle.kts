@@ -13,7 +13,7 @@ android {
     compileSdkVersion(28)
 
     defaultConfig {
-        applicationId = "fnew.fnew"
+        applicationId = "fnew.fnew.fnewappname"
         minSdkVersion(15)
         targetSdkVersion(28)
         versionCode = 1
