@@ -93,6 +93,21 @@
         "new": "$app_name"
       },
       "type": "file_string_replace"
+    },
+    {
+      "input_variable": "package_name",
+      "output_variable": "android_test_package_path",
+      "string_prefix": "android/src/androidTest/kotlin/",
+      "string_replace": {
+        "old": ".",
+        "new": "/"
+      },
+      "type": "variable_string_replace"
+    },
+    {
+      "input_path": "android/src/androidTest/kotlin/fnew",
+      "output_path": "android_test_package_path",
+      "type": "file_move"
     }
   ]
 }
