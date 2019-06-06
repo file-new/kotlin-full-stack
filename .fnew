@@ -69,6 +69,6 @@
         "new": "$app_name"
       },
       "type": "file_string_replace"
-    },
+    }
   ]
 }
