@@ -2,7 +2,7 @@ object Versions {
     const val androidGradlePlugin = "3.2.0"
     const val androidLifecycle = "2.0.0"
     const val junit = "4.12"
-    const val kotlin = "1.3.30"
+    const val kotlin = "1.3.40"
     const val ktor = "1.1.3"
 }
 
