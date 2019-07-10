@@ -21,6 +21,14 @@
       "type": "file_string_replace"
     },
     {
+      "input_path": "settings.gradle.kts",
+      "string_replace": {
+        "old": "kotlin-full-stack",
+        "new": "application_id"
+      },
+      "type": "file_string_replace"
+    },
+    {
       "input_path": "*/src/*/kotlin/fnew/shared/*.kt",
       "string_replace": {
         "old": "fnew",
