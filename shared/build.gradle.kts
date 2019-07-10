@@ -39,7 +39,21 @@ kotlin {
         }
     }
     jvm()
-    js()
+    js {
+        browser {
+            testTask {}
+        }
+        nodejs {
+            testTask {
+                testLogging {
+                    showExceptions = true
+                    exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+                    showCauses = true
+                    showStackTraces = true
+                }
+            }
+        }
+    }
 
     @Suppress("UNUSED_VARIABLE") // The name of the some properties are used to look up the source set.
     sourceSets {
