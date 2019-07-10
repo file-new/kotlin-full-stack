@@ -24,7 +24,7 @@
       "input_path": "settings.gradle.kts",
       "string_replace": {
         "old": "kotlin-full-stack",
-        "new": "application_id"
+        "new": "$application_id"
       },
       "type": "file_string_replace"
     },
