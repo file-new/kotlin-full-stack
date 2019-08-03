@@ -8,6 +8,7 @@ object Versions {
 
 object Deps {
     const val kotlinJvm = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
+    const val mockk = "io.mockk:mockk:1.9.3.kotlin12"
 
     object Android {
         const val appCompat = "androidx.appcompat:appcompat:1.0.2"
@@ -21,6 +22,10 @@ object Deps {
     }
 
     object Jvm {
+        const val jacksonKotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8"
+        const val ktorClientOkhttp = "io.ktor:ktor-client-okhttp:${Versions.ktor}"
+        const val ktorHtml = "io.ktor:ktor-html-builder:${Versions.ktor}"
+        const val ktorJackson = "io.ktor:ktor-jackson:${Versions.ktor}"
         const val ktorServer = "io.ktor:ktor-server-netty:${Versions.ktor}"
     }
 
@@ -31,6 +36,7 @@ object Deps {
         }
 
         object Common {
+            const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0-RC"
             const val stdLib = "stdlib-common"
             const val test = "test-common"
             const val testAnnotations = "test-annotations-common"

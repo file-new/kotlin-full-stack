@@ -60,6 +60,7 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
+                implementation(Deps.Kotlin.Common.coroutines)
                 implementation(kotlin(Deps.Kotlin.Common.stdLib))
             }
         }
