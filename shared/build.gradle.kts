@@ -1,5 +1,6 @@
 plugins {
     id("com.android.library")
+    id("kotlinx-serialization")
     kotlin("multiplatform")
 }
 
@@ -61,6 +62,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(Deps.Kotlin.Common.coroutines)
+                implementation(Deps.Kotlin.Common.serialization)
                 implementation(kotlin(Deps.Kotlin.Common.stdLib))
             }
         }
@@ -104,6 +106,7 @@ kotlin {
         jvm().compilations["test"].defaultSourceSet {
             dependencies {
                 implementation(kotlin(Deps.Kotlin.Jvm.junit))
+                implementation(Deps.Kotlin.Jvm.serialization)
             }
         }
 
@@ -111,6 +114,7 @@ kotlin {
         js().compilations["main"].defaultSourceSet {
             dependencies {
                 implementation(kotlin(Deps.Kotlin.Js.stdLib))
+                implementation(Deps.Kotlin.Js.serialization)
             }
         }
 

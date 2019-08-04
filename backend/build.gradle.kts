@@ -1,6 +1,7 @@
 plugins {
     application
     kotlin("jvm")
+    id("kotlinx-serialization")
 }
 
 repositories {
@@ -20,7 +21,7 @@ sourceSets {
             implementation(Deps.Jvm.jacksonKotlin)
             implementation(Deps.Jvm.ktorClientOkhttp)
             implementation(Deps.Jvm.ktorHtml)
-            implementation(Deps.Jvm.ktorJackson)
+            implementation(Deps.Jvm.ktorSerialization)
             implementation(Deps.Jvm.ktorServer)
             implementation(kotlin(Deps.Kotlin.Jvm.stdLib))
         }

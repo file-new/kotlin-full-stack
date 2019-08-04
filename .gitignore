@@ -3,6 +3,7 @@
 # Edit at https://www.gitignore.io/?templates=kotlin,gradle,intellij
 
 ### Intellij ###
+classes/
 out/
 .idea/
 *.iml

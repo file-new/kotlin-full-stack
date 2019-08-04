@@ -3,7 +3,8 @@ object Versions {
     const val androidLifecycle = "2.0.0"
     const val junit = "4.12"
     const val kotlin = "1.3.40"
-    const val ktor = "1.1.3"
+    const val ktor = "1.2.3"
+    const val serialization = "0.11.1"
 }
 
 object Deps {
@@ -26,6 +27,7 @@ object Deps {
         const val ktorClientOkhttp = "io.ktor:ktor-client-okhttp:${Versions.ktor}"
         const val ktorHtml = "io.ktor:ktor-html-builder:${Versions.ktor}"
         const val ktorJackson = "io.ktor:ktor-jackson:${Versions.ktor}"
+        const val ktorSerialization = "io.ktor:ktor-serialization:${Versions.ktor}"
         const val ktorServer = "io.ktor:ktor-server-netty:${Versions.ktor}"
     }
 
@@ -37,17 +39,21 @@ object Deps {
 
         object Common {
             const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0-RC"
+            const val serialization =
+                "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:${Versions.serialization}"
             const val stdLib = "stdlib-common"
             const val test = "test-common"
             const val testAnnotations = "test-annotations-common"
         }
 
         object Jvm {
-            const val stdLib = "stdlib-jdk8"
             const val junit = "test-junit"
+            const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:${Versions.serialization}"
+            const val stdLib = "stdlib-jdk8"
         }
 
         object Js {
+            const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-js:${Versions.serialization}"
             const val stdLib = "stdlib-js"
             const val test = "test-js"
         }
