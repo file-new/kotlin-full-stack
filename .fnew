@@ -53,6 +53,14 @@
       "type": "file_string_replace"
     },
     {
+      "input_path": "backend/src/main/resources/application.conf",
+      "string_replace": {
+        "old": "fnew",
+        "new": "$package_name"
+      },
+      "type": "file_string_replace"
+    },
+    {
       "input_path": "android/build.gradle.kts",
       "string_replace": {
         "old": "fnew.fnew",
