@@ -2,6 +2,7 @@ object Versions {
     const val androidGradlePlugin = "3.2.0"
     const val androidLifecycle = "2.0.0"
     const val junit = "4.12"
+    const val koin = "2.0.1"
     const val kotlin = "1.3.40"
     const val ktor = "1.2.3"
     const val serialization = "0.11.1"
@@ -24,6 +25,7 @@ object Deps {
 
     object Jvm {
         const val jacksonKotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8"
+        const val koinKtor = "org.koin:koin-ktor:${Versions.koin}"
         const val ktorClientOkhttp = "io.ktor:ktor-client-okhttp:${Versions.ktor}"
         const val ktorHtml = "io.ktor:ktor-html-builder:${Versions.ktor}"
         const val ktorJackson = "io.ktor:ktor-jackson:${Versions.ktor}"
@@ -39,6 +41,7 @@ object Deps {
 
         object Common {
             const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0-RC"
+            const val koinCore = "org.koin:koin-core:${Versions.koin}"
             const val serialization =
                 "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:${Versions.serialization}"
             const val stdLib = "stdlib-common"

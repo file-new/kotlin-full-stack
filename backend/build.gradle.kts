@@ -19,6 +19,7 @@ sourceSets {
 
             implementation(Deps.Kotlin.Common.coroutines)
             implementation(Deps.Jvm.jacksonKotlin)
+            implementation(Deps.Jvm.koinKtor)
             implementation(Deps.Jvm.ktorClientOkhttp)
             implementation(Deps.Jvm.ktorHtml)
             implementation(Deps.Jvm.ktorSerialization)
