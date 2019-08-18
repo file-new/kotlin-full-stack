@@ -12,7 +12,7 @@ repositories {
 sourceSets {
     getByName("main") {
         application {
-            mainClassName = "fnew.MainKt"
+            mainClassName = "io.ktor.server.netty.EngineMain"
         }
         dependencies {
             implementation(project(":shared"))
