@@ -77,6 +77,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(kotlin(Deps.Kotlin.Android.stdLib))
+                implementation(Deps.Kotlin.Jvm.serialization)
             }
         }
 
@@ -100,6 +101,7 @@ kotlin {
         jvm().compilations["main"].defaultSourceSet {
             dependencies {
                 implementation(kotlin(Deps.Kotlin.Jvm.stdLib))
+                implementation(Deps.Kotlin.Jvm.serialization)
             }
         }
 
