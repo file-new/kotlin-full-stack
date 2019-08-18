@@ -14,10 +14,10 @@ import org.junit.runner.RunWith
 class MainActivityTest {
 
     @get:Rule
-    val activityRule = ActivityScenarioRule<MainActivity>(MainActivity::class.java)
+    val activityRule = ActivityScenarioRule(MainActivity::class.java)
 
     @Test
     fun helloMessageIsSet() {
-        onView(withText("Hello from Android")).check(matches(isDisplayed()))
+        onView(withText("hello world")).check(matches(isDisplayed()))
     }
 }

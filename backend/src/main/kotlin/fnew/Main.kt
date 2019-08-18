@@ -1,6 +1,5 @@
 package fnew
 
-import fnew.shared.hello
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
@@ -21,7 +20,7 @@ fun main() {
                 serialization()
             }
             get("/") {
-                call.respondText(hello(), ContentType.Text.Html)
+                call.respondText("Hello world", ContentType.Text.Html)
             }
         }
     }.start(wait = true)

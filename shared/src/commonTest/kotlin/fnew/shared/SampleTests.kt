@@ -5,7 +5,7 @@ import kotlin.test.assertTrue
 
 class SampleTests {
     @Test
-    fun testMe() {
+    fun sanity() {
         assertTrue { true }
     }
 }
