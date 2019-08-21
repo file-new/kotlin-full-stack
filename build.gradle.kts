@@ -13,6 +13,16 @@ buildscript {
 allprojects {
     repositories {
         google()
+        jcenter()
         mavenCentral()
     }
+}
+
+tasks.create("ciTest") {
+    dependsOn(
+        "shared:jvmTest",
+        "shared:jsTest",
+        "backend:test",
+        "android:test"
+    )
 }
